@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bienvenide</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+
+    <h1 id="nombre"></h1>
+    <h2 id="apellidos"></h2>
+    <a id="correo" href="mailto:"+correo></a>
+    <h2 id="fecha"></h2>
+    <a id="telefono" href = "tel:" + telefono></a>
+    <h2 id="usuario"></h2>
+    <h1 id="contraseña"></h1>
+    <h2 id="contraseña"></h2>
+
+    <script>
+        
+        getParameter = (key) => {
+            
+        address = window.location.search; //Url ventana actual
+        
+        //Objeto de tipo URLSearchPrograms
+        parameterList = new URLSearchParams(address);
+
+        //Regresa el valor del parametro "key"
+        return parameterList.get(key);
+        }
+
+        var nombre = getParameter("nombre");
+        var apellidos = getParameter("apellidos");
+        var correo = getParameter("correo");
+        var fecha = getParameter("fecha");
+        var telefono = getParameter("telefono");
+        var usuario = getParameter("usuario");
+        var contraseña = getParameter("contraseña");
+        var contraseña = getParameter("contraseña");
+ 
+
+        
+        
+            document.getElementById("nombre").innerHTML = "Nombre: " + nombre;
+            document.getElementById("apellidos").innerHTML = "Apellidos: " + apellidos;
+            document.getElementById("correo").innerHTML = "correo: " + correo;
+            document.getElementById("fecha").innerHTML = "Fecha de nacimiento: " + fecha;
+            document.getElementById("telefono").innerHTML = "telefono: " + telefono;
+            document.getElementById("usuario").innerHTML = "usuario: " + usuario;
+            document.getElementById("contraseña".length(4)).innerHTML = "contraseña: " + contraseña;
+            document.getElementById("contraseña").innerHTML = "contraseña: " + contraseña;
+           
+
+
+
+        
+        </script>
+
+    
+</body>
+</html>

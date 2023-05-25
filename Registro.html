@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+<!--Hacer un formulario para el registro de un producto de tienda
+    Nombre
+    Codigo
+    Precio
+    Unidades en inventario
+    Descripcion
+-->
+
+
+<form action="Bienvenide.html" method="get">
+
+    <laber>nombre:</laber><input type="text" name ="nombre" value = "Beto"><br><br>
+    <label>apellidos:</label><input type="text" name = "apellidos"><br><br>
+    <label>correo:</label><input type="mail" name="correo"><br><br>
+    <label>fecha de nacimiento</label><input type="date" name ="fecha"><br><br>
+    <label>telefono:</label><input type="tel" name ="telefono"><br><br>
+    <label>usuario:</label><input type="text" name="usuario"><br><br>
+    <label>contraseña:</label><input type="text" name ="contraseña" ><br><br>
+    <label>repetir contraseña:</label><input type="text" name ="contraseña" onchange="funcion()" ><br><br>
+    
+    <input type="submit" value="Registrar usuario">
+
+
+    </form>
+
+    <h1 id="mensaje"></h1>
+
+    <script>
+        
+        getParameter = (key) => {
+            
+        address = window.location.search; //Url ventana actual
+        
+        //Objeto de tipo URLSearchPrograms
+        parameterList = new URLSearchParams(address);
+
+        //Regresa el valor del parametro "key"
+        return parameterList.get(key);
+        }
+
+        var contraseña = getParameter("contraseña");
+
+        function funcion(){
+
+            if (contraseña == contraseña) {
+            alert("La contraseña debe tener mas de 4 caracteres");
+
+
+        }
+    }
+
+      
+        
+        </script>
+
+
+
+
+
+
+
+    
+</body>
+</html>
